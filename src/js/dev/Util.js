@@ -1,6 +1,7 @@
 var Util = {
     /**
      * @param {String} query Typically the result of window.location.search.
+     * @returns {Object}
      */
     parseQuery: function (query) {
         // Decode the uri and remove the leading '?'.
@@ -15,9 +16,19 @@ var Util = {
         }
         return result;
     },
+    /**
+     * Remove non numeric data from story id.
+     * @param {String} id Request query.
+     * @param {Number}
+     */
     parseStoryId: function (id) {
         return parseInt(id.slice(-2));
     },
+    /**
+     * Split a block of story text in half.
+     * @param {String} story
+     * @returns {Array}
+     */
     splitStory: function (story) {
         var len = story.length;
         var offset = story.slice(len / 2).search(/<p>/i);
