@@ -7,11 +7,15 @@ $(function () {
         dataType: "json",
         type: "GET",
         success: function (res) {
-            console.log(res);
             // Check request for query.
             var query = Util.parseQuery(window.location.search);
             if (query.story) {
-                console.log("story view");
+                var id = Util.parseStoryId(query.story);
+                var view = new EJS({
+                    url: "views/story.ejs"
+                });
+                var markup = view.render(res.objects[id]);
+                $("#page").html(markup);
             } else {
                 console.log("list view");
             }

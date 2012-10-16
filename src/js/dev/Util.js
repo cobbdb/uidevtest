@@ -15,6 +15,9 @@ var Util = {
         }
         return result;
     },
+    parseStoryId: function (id) {
+        return parseInt(id.slice(-2));
+    },
     splitStory: function (story) {
         var len = story.length;
         var offset = story.slice(len / 2).search(/<p>/i);
