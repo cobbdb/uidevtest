@@ -1,0 +1,16 @@
+<h4>Your New Feed:</h4>
+<div id="feed">
+<% for (var i in objects) { %>
+    <% var story = objects[i] %>
+    <img src="<%= story.lead_photo_image_thumb %>" alt="" />
+    <p>
+        <span class="headline">Headline Text (Link)</span>
+        <span class="categoryList">Category / Categories Text</span>
+    </p>
+    <p>
+        Posted: <%= new Date(story.pub_date).toString() %>
+        <br />
+        Updated: <%= new Date(story.updated).toString() %>
+    </p>
+<% } %>
+</div>

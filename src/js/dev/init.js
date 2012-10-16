@@ -5,10 +5,10 @@ $(function () {
         dataType: "json",
         type: "GET",
         success: function (res) {
-            console.log("story view");
             // Check request for query and branch.
             var query = Util.parseQuery(window.location.search);
             if (query.story) {
+                console.log("story view");
                 // Grab id of story from query.
                 var id = Util.parseStoryId(query.story);
                 
