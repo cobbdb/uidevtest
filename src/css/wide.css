@@ -11,18 +11,15 @@ h2 {
     -moz-column-gap: 15px;
     -webkit-column-gap: 15px;
     column-gap: 15px;
-    -moz-column-width: 260px;
-    -webkit-column-width: 260px;
-    column-width: 260px;
+    -moz-column-width: 200px;
+    -webkit-column-width: 200px;
+    column-width: 200px;
 }
-#photo > div {
+#graphic {
     position: relative;
-}
-#photo div {
-    display: inline-block;
-}
-#photo img {
-    display: block;
+    border: 2px solid black;
+    width: 260px;
+    height: 230px;
 }
 #photo span {
     color: black;
@@ -31,9 +28,24 @@ h2 {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 0 5px;
+    padding: 2px 4px;
+}
+#caption {
+    margin-top: 10px;
 }
 #options {
-    position: relative;
-    left: 260px;
+    position: absolute;
+    margin-left: 280px;
+}
+#photo {
+    margin-right: 10px;
+    float: left;
+}
+#report {
+    margin-top: 20px;
+    margin-left: 280px;
+    position: absolute;
+}
+#story p {
+    margin-top: 0;
 }

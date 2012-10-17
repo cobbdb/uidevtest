@@ -3,9 +3,11 @@ body {
     background-color: #F6F6F6;
 }
 #page {
-    width: 100%;
+    position: relative;
     max-width: 700px;
     margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 5px;
 }
 img {
     border: none;

@@ -6,10 +6,12 @@ h2 {
 }
 #photo {
     width: 260px;
-    max-height: 230px;
 }
 #photo span {
-    color: #999;
+    color: #898989;
     display: block;
     text-align: right;
+}
+#caption {
+    margin-top: 10px;
 }

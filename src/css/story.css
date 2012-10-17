@@ -26,3 +26,14 @@ h2 {
 #photo {
     line-height: 14px;
 }
+#photo img {
+    width: 260px;
+    max-height: 230px;
+}
+#credit {
+    margin: 10px 0;
+}
+#credit a {
+    font-size: 14px;
+    font-weight: normal;
+}

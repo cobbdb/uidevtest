@@ -35,27 +35,24 @@ var ADAPT_CONFIG = {
     FAVORITE
     VOTE
 </div>
-<div>
-    <div id="photo">
-        <div>
-            <img src="<%= lead_photo_image_url %>" alt="" />
-            <span><%= lead_photo_credit %></span>
-        </div>
-        <br />
-        <div><%= lead_photo_caption %></div>
+<div id="photo">
+    <div id="graphic">
+        <img src="<%= lead_photo_image_url %>" alt="" />
+        <span><%= lead_photo_credit %></span>
     </div>
-    <div id="report">
-        <div>
-            By
-            <% for (var i = 0; i < author.length; i += 1) { %>
-                <% if (i != 0) { %>
-                    <%= ", " %>
-                <% } %>
-                <a href="#"><%= author[i] %></a>
+    <div id="caption"><%= lead_photo_caption %></div>
+</div>
+<div id="report">
+    <div id="credit">
+        By
+        <% for (var i = 0; i < author.length; i += 1) { %>
+            <% if (i != 0) { %>
+                <%= ", " %>
             <% } %>
-        </div>
-        <div id="story">
-            <%= story %>
-        </div>
+            <a href="#"><%= author[i] %></a>
+        <% } %>
+    </div>
+    <div id="story">
+        <%= story %>
     </div>
 </div>
