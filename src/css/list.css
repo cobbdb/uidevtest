@@ -1,9 +1,5 @@
 .headline {
     font-size: 16px;
-    text-decoration: none;
-}
-.headline:hover {
-    text-decoration: underline;
 }
 #page {
     font-size: 14px;

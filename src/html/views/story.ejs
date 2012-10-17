@@ -10,8 +10,52 @@ var ADAPT_CONFIG = {
 </script>
 <script src="../js/adapt.min.js"></script>
 
+<link href="../css/story.css" rel="stylesheet" />
+
+<div id="breadcrumb" class="highlight">
+    <a href="#">HOME</a>
+    <% for (var i in categories_name) { %>
+        &gt;
+        <a href="#"><%= categories_name[i].toUpperCase() %></a>
+    <% } %>
+</div>
+<div id="title">
+    <h2><%= title %></h2>
+    <div>
+        <div>
+            Updated: <%= new Date(updated).toString() %>
+            |
+            Posted: <%= new Date(pub_date).toString() %>
+        </div>
+    </div>
+</div>
+<div id="options" class="highlight">
+    COMMENT
+    SHARE
+    FAVORITE
+    VOTE
+</div>
 <div>
-    I'm a view and my story is:
-    <br />
-    <%= story %>
+    <div id="photo">
+        <div>
+            <img src="<%= lead_photo_image_url %>" alt="" />
+            <span><%= lead_photo_credit %></span>
+        </div>
+        <br />
+        <div><%= lead_photo_caption %></div>
+    </div>
+    <div id="report">
+        <div>
+            By
+            <% for (var i = 0; i < author.length; i += 1) { %>
+                <% if (i != 0) { %>
+                    <%= ", " %>
+                <% } %>
+                <a href="#"><%= author[i] %></a>
+            <% } %>
+        </div>
+        <div id="story">
+            <%= story %>
+        </div>
+    </div>
 </div>

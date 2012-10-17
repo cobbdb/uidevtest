@@ -1,7 +1,39 @@
-div {
-    border: 1px solid blue;
+#title > div {
+    bottom: 0;
 }
-
-#myButt {
-    color: red;
+h2 {
+    padding: 0 0 20px;
+}
+#story {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 15px;
+    -webkit-column-gap: 15px;
+    column-gap: 15px;
+    -moz-column-width: 260px;
+    -webkit-column-width: 260px;
+    column-width: 260px;
+}
+#photo > div {
+    position: relative;
+}
+#photo div {
+    display: inline-block;
+}
+#photo img {
+    display: block;
+}
+#photo span {
+    color: black;
+    background-color: white;
+    opacity: 0.66;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 5px;
+}
+#options {
+    position: relative;
+    left: 260px;
 }

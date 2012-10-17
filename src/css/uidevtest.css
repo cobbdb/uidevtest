@@ -10,8 +10,12 @@ body {
 img {
     border: none;
 }
-.highlight {
+.highlight, a {
     font-size: 11px;
     color: #036DBE;
     font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }

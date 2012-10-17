@@ -1,0 +1,28 @@
+#page {
+    font-size: 14px;
+    color: #444;
+}
+#breadcrumb {
+    margin-top: 15px;
+    border-top: 2px solid #CDCDCD;
+    border-bottom: 2px solid #CDCDCD;
+    padding: 5px 10px;
+}
+#title {
+    position: relative;
+    margin: 10px 0;
+}
+#title > div {
+    position: absolute;
+    font-size: 11px;
+}
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+#story {
+    line-height: 18px;
+}
+#photo {
+    line-height: 14px;
+}
