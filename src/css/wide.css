@@ -36,6 +36,8 @@ h2 {
 #options {
     position: absolute;
     margin-left: 280px;
+    line-height: 15px;
+    z-index: 100;
 }
 #photo {
     margin-right: 10px;
@@ -48,4 +50,28 @@ h2 {
 }
 #story p {
     margin-top: 0;
+}
+#comment .icon {
+    background-position: 0 -19px !important;
+}
+#share .icon {
+    background-position: -20px -19px !important;
+}
+#favorite .icon {
+    background-position: -40px -19px !important;
+}
+#vote .icon {
+    background-position: -60px -19px !important;
+}
+#comment:hover .icon {
+    background-position: 0 0 !important;
+}
+#share:hover .icon {
+    background-position: -20px 0 !important;
+}
+#favorite:hover .icon {
+    background-position: -40px 0 !important;
+}
+#vote:hover .icon {
+    background-position: -60px 0 !important;
 }

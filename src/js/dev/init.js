@@ -5,26 +5,31 @@ $(function () {
         dataType: "json",
         type: "GET",
         success: function (res) {
-            // Check request for query and branch.
+            var showList = true;
+            
+            // Check request for query and determine state.
             var query = Util.parseQuery(window.location.search);
             if (query.story) {
-                console.log("story view");
                 // Grab id of story from query.
                 var id = Util.parseStoryId(query.story);
-                
-                // Load template and render requested story.
-                var view = new EJS({
-                    url: "views/story.ejs"
-                });
-                var markup = view.render(res.objects[id]);
-                $("#page").html(markup);
-            } else {
-                console.log("list view");
+                if (id > 0 && id <= res.objects.length) {
+                    showList = false;
+                }
+            }
+            
+            if (showList) {
                 // Load template and render story list.
                 var view = new EJS({
                     url: "views/list.ejs"
                 });
                 var markup = view.render(res);
+                $("#page").html(markup);
+            } else {
+                // Load template and render requested story.
+                var view = new EJS({
+                    url: "views/story.ejs"
+                });
+                var markup = view.render(res.objects[id - 1]);
                 $("#page").html(markup);
             }
         },

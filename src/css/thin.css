@@ -15,3 +15,9 @@ h2 {
 #caption {
     margin-top: 10px;
 }
+#options {
+    margin: 15px 0;
+}
+#options a:hover {
+    text-decoration: none;
+}
