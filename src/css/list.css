@@ -1,0 +1,40 @@
+.headline {
+    font-size: 16px;
+    text-decoration: none;
+}
+.headline:hover {
+    text-decoration: underline;
+}
+#page {
+    font-size: 14px;
+    color: #444;
+}
+#feed {
+    padding: 0 5px;
+}
+img {
+    border: 2px solid #FAFAFA;
+    -webkit-box-shadow: 2px 2px 5px #555;
+	-moz-box-shadow: 2px 2px 5px #555;
+	box-shadow: 2px 2px 5px #555;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    width: 134px;
+    max-height: 103px;
+}
+.report {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+p {
+    margin-top: 0;
+}
+.story {
+    margin-bottom: 10px;
+}
+h4 {
+    text-align: center;
+}

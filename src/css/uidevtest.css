@@ -1,0 +1,17 @@
+body {
+    font-family: arial;
+    background-color: #F6F6F6;
+}
+#page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+img {
+    border: none;
+}
+.highlight {
+    font-size: 11px;
+    color: #036DBE;
+    font-weight: bold;
+}

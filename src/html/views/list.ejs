@@ -1,16 +1,32 @@
-<h4>Your New Feed:</h4>
+<link href="../css/list.css" rel="stylesheet" />
+
+<h4>Your News Feed</h4>
 <div id="feed">
 <% for (var i in objects) { %>
     <% var story = objects[i] %>
-    <img src="<%= story.lead_photo_image_thumb %>" alt="" />
-    <p>
-        <span class="headline">Headline Text (Link)</span>
-        <span class="categoryList">Category / Categories Text</span>
-    </p>
-    <p>
-        Posted: <%= new Date(story.pub_date).toString() %>
-        <br />
-        Updated: <%= new Date(story.updated).toString() %>
-    </p>
+    <div class="story">
+        <img src="<%= story.lead_photo_image_thumb %>" alt="" />
+        <div class="report">
+            <p>
+                <a href="<%= story.url_path %>" class="headline highlight">
+                    <%= story.title %>
+                </a>
+                <br />
+                <span>
+                <% for (var j = 0; j < story.categories_name.length; j += 1) { %>
+                    <% if (j != 0) { %>
+                        <%= " / " %>
+                    <% } %>
+                    <%= story.categories_name[j] %>
+                <% } %>
+                </span>
+            </p>
+            <p>
+                Posted: <%= new Date(story.pub_date).toString() %>
+                <br />
+                Updated: <%= new Date(story.updated).toString() %>
+            </p>
+        </div>
+    </div>
 <% } %>
 </div>
